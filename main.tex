@@ -1,0 +1,75 @@
+\documentclass{ctexbook}
+
+% Bookmark
+
+\usepackage{bookmark}
+
+% Figure
+
+\usepackage{amsmath, amssymb, pgfplots}
+\pgfplotsset{compat = newest, width = 6cm}
+
+% Caption
+
+\usepackage[labelsep = space]{caption}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}~}
+\renewcommand{\thetable}{\thechapter.\arabic{table}~}
+\DeclareCaptionFont{kaishu}{\kaishu}
+\captionsetup{font = kaishu}
+
+% Table 
+
+\usepackage{multirow, float}
+\renewcommand{\arraystretch}{1.5}
+
+% Font
+
+\usepackage{textcomp, mathcomp}
+
+\usepackage{graphicx}
+\usepackage{ctex}
+\xeCJKsetup{CJKmath = true}
+\usepackage{amsmath}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{draftwatermark}
+\SetWatermarkText{}
+% \SetWatermarkLightness{0.95}
+% \SetWatermarkScale{1}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\fancyhead{}
+\fancyfoot[C]{\thepage}
+\pagestyle{fancy}
+
+\def\blue#1{{\bf\color{blue}#1}}
+\def\red#1{{\bf\color{red}#1}}
+\def\mathline#1{{\red{\begin{equation}#1\end{equation}}}}
+\def\titlename#1{\caption{#1}\label{#1}}
+
+\title{\huge\textbf{中学物理}}
+\author{田怿}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\ctexset{
+	chapter={name={Chapter~,},number=\Roman{chapter}},
+	section={number=\arabic{section}},
+	subsection={number=\arabic{section}.\arabic{subsection}},
+}
+\tableofcontents
+\setcounter{page}{0}
+\thispagestyle{empty}
+
+\setstretch{1.05}
+
+\input{thermology/thermology.tex}
+
+\end{document}
