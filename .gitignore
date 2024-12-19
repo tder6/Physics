@@ -18,3 +18,4 @@
 *.log
 *.fdb_latexmk
 *.synctex*
+*test*
