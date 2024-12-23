@@ -1,8 +1,8 @@
 ---
 name: "[EN] Fix Minor Details"
 about: "Correct small errors in the documentation, such as spelling mistakes, formatting issues, or minor logical errors"
-title: "[Detail] <Briefly describe the fix>"
-labels: "detail"
+title: "[Details] <Briefly describe the fix>"
+labels: "details"
 assignees: ""
 ---
 
