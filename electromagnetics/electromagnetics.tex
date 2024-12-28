@@ -3,5 +3,25 @@
 \newpage
 {\bf 这里是一段关于电磁学的介绍.}
 
+\newcommand\resistance{
+	\begin{tikzpicture}[baseline = {([yshift = -3.5pt] current bounding box.center)}]
+		\draw (0, 0) rectangle (0.6, 0.2);
+		\draw (-0.3, 0.1) -- (0, 0.1);
+		\draw (0.6, 0.1) -- (0.9, 0.1);
+	\end{tikzpicture}
+}
+
+\newcommand\ammeter{
+	\begin{tikzpicture}[baseline = {([yshift = -3.5pt] current bounding box.center)}]
+		\node (A) [circle, draw, scale = 1, inner sep = 1pt, line width = 0.5pt] at (0, 1){\small A};
+	\end{tikzpicture}
+} % ~{\Large\textcircled{\small A}}~
+
+\newcommand\voltmeter{
+	\begin{tikzpicture}[baseline = {([yshift = -3.5pt] current bounding box.center)}]
+		\node (V) [circle, draw, scale = 1, inner sep = 1pt, line width = 0.5pt] at (0, 1){\small V};
+	\end{tikzpicture}
+} % ~{\Large\textcircled{\small V}}~
+
 \input{electromagnetics/charge.tex}
 \input{electromagnetics/circuit.tex}
