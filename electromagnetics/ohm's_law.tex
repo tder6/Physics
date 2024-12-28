@@ -8,3 +8,35 @@
 \mathline{I=\frac UR}
 \newline 欧姆定律对金属、电解液适用，对半导体、电离气体不适用.
 \end{itemize}
+
+\subsection{电阻的测量}
+\begin{itemize}
+\item 伏安法测电阻，即利用 $R=\frac UI$ 测量电阻.
+\item 小灯泡是非线性元件，其伏安特性曲线如图.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		axis lines = middle,
+		xmin = 0, xmax = 10,
+		ymin = 0, ymax = 10,
+		smooth, thick,
+		xlabel = {$U/\text{V}$}, ylabel = {$I/\text{A}$},
+		xlabel style = {anchor = north},
+		ylabel style = {anchor = east},
+		xtick = \empty,	ytick = \empty,
+		samples = 200,
+	]
+		\addplot+[no marks, domain = 0 : 10]{log10(x + 1) / log10(1.35)};
+	\end{axis}
+	\node at (0, 0) [below = 5pt, left = -2pt] {$O$};
+	\end{tikzpicture}
+	\titlename{小灯泡的伏安特性曲线}
+\end{figure}
+\end{itemize}
+
+\subsection{串、并联电路中的分压、分流规律}
+\begin{itemize}
+\item 串联分压，即 \blue{$\bm{U_1:U_2:\cdots:U_n=R_1:R_2:\cdots:R_n}$}.
+\item 并联分流，即 \blue{$\bm{I_1:I_2:\cdots:I_n=\frac1{R_1}:\frac1{R_2}:\cdots:\frac1{R_n}}$}.
+\end{itemize}

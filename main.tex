@@ -26,13 +26,26 @@
 
 \usepackage{textcomp, mathcomp, bm, circledtext}
 
+% Structure
+
+\usepackage{titlesec}
+\let\oldchapter\chapter
+\renewcommand\chapter{\clearpage\oldchapter}
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+\let\oldsubsection\subsection
+\renewcommand\subsection[1]{\oldsubsection{#1}\vspace{10pt}}
+
+% Math
+
+\everymath{\displaystyle}
+
 \usepackage{graphicx}
 \usepackage{ctex}
 \xeCJKsetup{CJKmath = true}
 \usepackage{amsmath}
 \usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
 \usepackage{setspace}
-\usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{draftwatermark}
@@ -45,17 +58,12 @@
 \fancyfoot[C]{\thepage}
 \pagestyle{fancy}
 
+% Custom
+
 \newcommand\blue[1]{{\bf\color{blue}#1}}
 \newcommand\red[1]{{\bf\color{red}#1}}
 \newcommand\mathline[1]{{\red{\begin{equation}\bm{#1}\end{equation}}}}
 \newcommand\titlename[1]{\caption{#1}\label{#1}}
-
-\let\oldchapter\chapter
-\renewcommand\chapter{\clearpage\oldchapter}
-\let\oldsection\section
-\renewcommand\section{\clearpage\oldsection}
-\let\oldsubsection\subsection
-\renewcommand\subsection[1]{\oldsubsection{#1}\vspace{10pt}}
 
 \title{\huge\textbf{中学物理}}
 \author{田怿}
