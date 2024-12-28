@@ -23,5 +23,15 @@
 	\end{tikzpicture}
 } % ~{\Large\textcircled{\small V}}~
 
+\newcommand\slidingrheostat{
+	\begin{tikzpicture}[baseline = {([yshift = -3.5pt] current bounding box.center)}]
+		\draw (0, 0) rectangle (0.6, 0.2);
+		\draw (-0.3, 0.1) -- (0, 0.1);
+		\draw [-stealth] (0.3, 0.4) -- (0.3, 0.2);
+		\draw [line join = miter] (0.9, 0.4) -- (0.3, 0.4) -- (0.3, 0.3);
+	\end{tikzpicture}
+}
+
 \input{electromagnetics/charge.tex}
 \input{electromagnetics/circuit.tex}
+\input{electromagnetics/ohm's_law.tex}
