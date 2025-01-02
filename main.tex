@@ -62,7 +62,7 @@
 
 \newcommand\blue[1]{{\bf\color{blue}#1}}
 \newcommand\red[1]{{\bf\color{red}#1}}
-\newcommand\mathline[1]{\begin{equation}\color{red}\bm{#1}\end{equation}}
+\newcommand\mathline[1]{\begin{equation}{\color{red}\bm{#1}}\end{equation}}
 \newcommand\titlename[1]{\caption{#1}\label{#1}}
 
 \title{\huge\textbf{中学物理}}
@@ -79,12 +79,15 @@
 	section={number=\arabic{section}},
 	subsection={number=\arabic{section}.\arabic{subsection}},
 }
-\tableofcontents
 \setcounter{page}{0}
-\thispagestyle{empty}
+\pagenumbering{Roman}
+\tableofcontents
 
 % \setstretch{1.05}
 
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
 \input{thermology/thermology.tex}
 \input{electromagnetics/electromagnetics.tex}
 
