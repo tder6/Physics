@@ -40,6 +40,10 @@
 
 \everymath{\displaystyle}
 
+% Symbol
+
+\usepackage{xltxtra}
+
 \usepackage{graphicx}
 \usepackage{ctex}
 \xeCJKsetup{CJKmath = true}
@@ -62,17 +66,41 @@
 
 \newcommand\blue[1]{{\bf\color{blue}#1}}
 \newcommand\red[1]{{\bf\color{red}#1}}
-\newcommand\mathline[1]{\begin{equation}{\color{red}\bm{#1}}\end{equation}}
-\newcommand\titlename[1]{\caption{#1}\label{#1}}
+
+\newcommand\Math[1]{\begin{equation}{\color{red}\bm{#1}}\end{equation}}
+\newcommand\Title[1]{\caption{#1}\label{#1}}
+\newcommand\Itemize[1]{\begin{itemize}#1\end{itemize}}
+\newcommand\Keyword[2]{\blue{#1}（#2）}
 
 \title{\huge\textbf{中学物理}}
-\author{田怿}
+\author{tder}
 \date{\today}
 
 \begin{document}
 
+\begin{titlepage}
+
 \maketitle
 \thispagestyle{empty}
+
+\pagenumbering{gobble}
+\hspace{1pt}
+\vfill
+\begingroup
+\raggedright\rule{14cm}{1pt}\vspace{5pt} \\
+\raggedright\noindent
+责任编辑~~tder \\
+邮\hspace{2em}箱~~1218546874@qq.com \\
+出版发行~~\XeLaTeX \\
+通信地址~~北京，中国 \\
+网\hspace{2em}址~~{\color{blue}\url{https://github.com/tder6/Physics}} \\
+版\hspace{2em}别~~\today~第 1 版 \\
+定\hspace{2em}价~~無料 \\
+\raggedright\rule{14cm}{1pt}\vspace{5pt} \\
+\textcopyleft~ALL WRONGS UNLEASHED.
+\endgroup
+
+\end{titlepage}
 
 \ctexset{
 	chapter={name={第,部分},number=\chinese{chapter}},
