@@ -8,6 +8,7 @@
 
 \usepackage{amsmath, amssymb, pgfplots}
 \pgfplotsset{compat = newest, width = 6cm}
+\tikzset{>=latex}
 
 % Caption
 
@@ -37,6 +38,8 @@
 \renewcommand\subsection[1]{\oldsubsection{#1}\vspace{10pt}}
 
 \usepackage{cleveref}
+
+\usepackage{emptypage}
 
 % Math
 
@@ -106,7 +109,9 @@
 
 \end{titlepage}
 
+\counterwithin{chapter}{part}
 \ctexset{
+	part={name={第,板块},number=\chinese{part}},
 	chapter={name={第,部分},number=\chinese{chapter}},
 	section={number=\arabic{section}},
 	subsection={number=\arabic{section}.\arabic{subsection}},

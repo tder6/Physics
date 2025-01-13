@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <string>
 using namespace std;
 void run(string x) {
 	cout<<x<<endl; system(x.c_str());
